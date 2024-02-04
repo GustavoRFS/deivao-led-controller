@@ -1,0 +1,72 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "PC Led",
+    "version": "0.0.1"
+  },
+  "tauri": {
+    "updater": {
+      "active": true,
+      "endpoints": ["https://deivao-updates.vercel.app/"],
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFCRTBCREI0MUIzREJCRjQKUldUMHV6MGJ0TDNnR3htZGErdXhYKzk0djhDT3p3YlNMUmw2SEE5Qm1ERExJNjV4Vms4WGR3NlQK",
+      "windows": {
+        "installMode": "passive",
+        "installerArgs": []
+      }
+    },
+    "allowlist": {
+      "window": {
+        "all": false,
+        "close": false,
+        "hide": false,
+        "show": false,
+        "maximize": false,
+        "minimize": false,
+        "unmaximize": false,
+        "unminimize": false,
+        "startDragging": false
+      },
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.gustavorfs.pcleds",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "decorations": true,
+        "fullscreen": false,
+        "resizable": true,
+        "title": "PC LEDs",
+        "width": 800,
+        "height": 600,
+        "transparent": true
+      }
+    ]
+  }
+}

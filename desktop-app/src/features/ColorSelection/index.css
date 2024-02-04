@@ -1,0 +1,15 @@
+.color-info-box,
+.alpha-selector {
+  display: none;
+}
+
+.main-container {
+  height: 204px !important;
+  width: 300px !important;
+}
+
+.color-picker {
+  position: relative !important;
+  width: 300px !important;
+  height: 210px;
+}
